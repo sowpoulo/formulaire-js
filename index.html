@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste des utilisateurs</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Liste des utilisateurs</h1>
+    <button id="addUserBtn">Ajouter utilisateur</button>
+    <table id="usersTable">
+      <thead>
+        <tr>
+          <th>Nom d'utilisateur</th>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Numéro d'enregistrement</th>
+          <th>Date de création</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Les utilisateurs seront listés ici -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal -->
+  <div id="userModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Ajouter un nouvel utilisateur</h2>
+      <form id="userForm">
+        <label for="firstName">Prénom:</label>
+        <input type="text" id="firstName" required><br>
+
+        <label for="lastName">Nom:</label>
+        <input type="text" id="lastName" required><br>
+
+        <label for="userName">Nom d'utilisateur:</label>
+        <input type="text" id="userName" required><br>
+
+        <label for="registrationNumber">Numéro d'enregistrement:</label>
+        <input type="text" id="registrationNumber" required><br>
+
+        <label for="status">Status:</label>
+        <select id="status" required>
+          <option value="Validé">Validé</option>
+          <option value="En validation">En validation</option>
+          <option value="Rejeté">Rejeté</option>
+        </select><br>
+
+        <button type="submit">Ajouter</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
